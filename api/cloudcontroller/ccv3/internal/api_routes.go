@@ -88,9 +88,12 @@ const (
 
 	GetServicePlansRequest = "GetServicePlans"
 
-	PostRouteRequest   = "PostRoute"
-	DeleteRouteRequest = "DeleteRouteRequest"
-	PatchRouteRequest  = "PatchRoute"
+	PostRouteRequest          = "PostRoute"
+	DeleteRouteRequest        = "DeleteRouteRequest"
+	PatchRouteRequest         = "PatchRoute"
+	PostRouteBindingRequest   = "PostRouteBinding"
+	GetRouteBindingsRequest   = "GetRouteBindings"
+	DeleteRouteBindingRequest = "DeleteRouteBinding"
 
 	DeleteOrphanedRoutesRequest = "DeleteOrphanedRoutes"
 	GetApplicationRoutesRequest = "GetApplicationRoutes"
@@ -197,6 +200,9 @@ var APIRoutes = []Route{
 	{Resource: RoutesResource, Path: "/", Method: http.MethodPost, Name: PostRouteRequest},
 	{Resource: RoutesResource, Path: "/:route_guid", Method: http.MethodDelete, Name: DeleteRouteRequest},
 	{Resource: RoutesResource, Path: "/:route_guid", Method: http.MethodPatch, Name: PatchRouteRequest},
+	{Resource: RouteBindingResource, Path: "/", Method: http.MethodPost, Name: PostRouteBindingRequest},
+	{Resource: RouteBindingResource, Path: "/", Method: http.MethodGet, Name: GetRouteBindingsRequest},
+	{Resource: RouteBindingResource, Path: "/:route_binding_guid", Method: http.MethodDelete, Name: DeleteRouteBindingRequest},
 
 	// v3 application feature
 	{Resource: AppsResource, Path: "/:app_guid/ssh_enabled", Method: http.MethodGet, Name: GetSSHEnabled},

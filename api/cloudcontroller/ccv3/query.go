@@ -29,6 +29,10 @@ const (
 	ServiceBrokerGUIDsFilter QueryKey = "service_broker_guids"
 	// ServiceBrokerNamesFilter is a query parameter when getting plans or offerings according to the Service Brokers that it relates to
 	ServiceBrokerNamesFilter QueryKey = "service_broker_names"
+	// ServiceInstanceGUIDFilter is a query parameter for listing objects by service instance GUID.
+	ServiceInstanceGUIDFilter QueryKey = "service_instance_guids"
+	// RouteGUIDFilter is a query parameter for listing objects by route GUID.
+	RouteGUIDFilter QueryKey = "route_guids"
 	// StatesFilter is a query parameter when getting a package's droplets by state
 	StatesFilter QueryKey = "states"
 	// HostsFilter is a query param for listing objects by hostname
